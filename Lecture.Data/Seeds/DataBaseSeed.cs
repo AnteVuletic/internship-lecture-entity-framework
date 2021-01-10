@@ -80,22 +80,22 @@ namespace Lecture.Data.Seeds
                     new VehicleBrand
                     {
                         Id = 1,
-                        Brand = "Volkswagen"
+                        Name = "Volkswagen"
                     },
                     new VehicleBrand
                     {
                         Id = 2,
-                        Brand = "Porsche"
+                        Name = "Porsche"
                     },
                     new VehicleBrand
                     {
                         Id = 3,
-                        Brand = "Yamaha"
+                        Name = "Yamaha"
                     },
                     new VehicleBrand
                     {
                         Id = 4,
-                        Brand = "Citroen"
+                        Name = "Citroen"
                     }
                 });
 
@@ -106,35 +106,35 @@ namespace Lecture.Data.Seeds
                     {
                         Id = 1,
                         BrandId = 1,
-                        Model = "Up",
+                        Name = "Up",
                         VehicleType = VehicleType.Car
                     },
                     new VehicleModel
                     {
                         Id = 2,
                         BrandId = 1,
-                        Model = "Golf",
+                        Name = "Golf",
                         VehicleType = VehicleType.Car
                     },
                     new VehicleModel
                     {
                         Id = 3,
                         BrandId = 2,
-                        Model = "Cayenne",
+                        Name = "Cayenne",
                         VehicleType = VehicleType.Car
                     },
                     new VehicleModel
                     {
                         Id = 4,
                         BrandId = 3,
-                        Model = "T-Max",
+                        Name = "T-Max",
                         VehicleType = VehicleType.Motorcycle
                     },
                     new VehicleModel
                     {
                         Id = 5,
                         BrandId = 4,
-                        Model = "Berlingo",
+                        Name = "Berlingo",
                         VehicleType = VehicleType.Van
                     }
                 });

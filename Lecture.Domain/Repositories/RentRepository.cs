@@ -114,7 +114,7 @@ namespace Lecture.Domain.Repositories
                     StartOfRent = r.StartOfRent,
                     Cost = r.RentRate.Cost * ((decimal)(r.EndOfRent.Value - r.StartOfRent).Days * 2),
                     Vehicle =
-                        $"Id: {r.Vehicle.Id} Kilometers: {r.Vehicle.Kilometers}km Model {r.Vehicle.VehicleModel.Model}",
+                        $"Id: {r.Vehicle.Id} Kilometers: {r.Vehicle.Kilometers}km Name {r.Vehicle.VehicleModel.Name}",
                     Rate = $"Rate: {r.RentRate.RentRateType} Cost: {r.RentRate.Cost}"
                 })
                 .FirstOrDefault(r => r.Id == rentId);

@@ -21,7 +21,7 @@ namespace Lecture.Presentation.Actions.Reports
             var rentDurationByModel = _vehicleModelRepository.GetCountByModelBiggerThenAverage();
             foreach (var rentDuration in rentDurationByModel)
             {
-                Console.WriteLine($"Model: {rentDuration.VehicleModel} Rent duration in days: {rentDuration.RentSpan.TotalDays}");
+                Console.WriteLine($"Name: {rentDuration.VehicleModel} Rent duration in days: {rentDuration.RentSpan.TotalDays}");
             }
 
             Console.ReadLine();

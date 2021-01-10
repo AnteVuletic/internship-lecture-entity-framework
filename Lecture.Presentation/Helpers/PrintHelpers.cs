@@ -46,7 +46,7 @@ namespace Lecture.Presentation.Helpers
 
         public static void PrintVehicleBrand(VehicleBrand vehicleBrand)
         {
-            Console.WriteLine($"Id: {vehicleBrand.Id} \t Brand: {vehicleBrand.Brand}");
+            Console.WriteLine($"Id: {vehicleBrand.Id} \t Name: {vehicleBrand.Name}");
         }
 
         public static void PrintVehicleBrands(ICollection<VehicleBrand> vehicleBrands)
@@ -59,7 +59,7 @@ namespace Lecture.Presentation.Helpers
 
         public static void PrintVehicleModel(VehicleModel vehicleModel)
         {
-            Console.WriteLine($"Id: {vehicleModel.Id} \t Type: {vehicleModel.VehicleType} \t Brand: {vehicleModel.Brand.Brand} \t Model Name: {vehicleModel.Model}");
+            Console.WriteLine($"Id: {vehicleModel.Id} \t Type: {vehicleModel.VehicleType} \t Name: {vehicleModel.Brand.Name} \t Name Name: {vehicleModel.Name}");
         }
 
         public static void PrintVehicleModels(ICollection<VehicleModel> vehicleModels)
@@ -72,7 +72,7 @@ namespace Lecture.Presentation.Helpers
 
         public static void PrintVehicle(Vehicle vehicle)
         {
-            Console.WriteLine($"Id: {vehicle.Id} \t Brand: {vehicle.VehicleModel.Brand.Brand} \tModel: {vehicle.VehicleModel.Model} \t Kilometers: {vehicle.Kilometers}");
+            Console.WriteLine($"Id: {vehicle.Id} \t Name: {vehicle.VehicleModel.Brand.Name} \tModel: {vehicle.VehicleModel.Name} \t Kilometers: {vehicle.Kilometers}");
         }
 
         public static void PrintVehicles(ICollection<Vehicle> vehicles)
@@ -98,7 +98,7 @@ namespace Lecture.Presentation.Helpers
 
         public static void PrintRent(Rent rent)
         {
-            Console.WriteLine($"Id: {rent.Id} \t Vehicle: {rent.Vehicle.VehicleModel.Brand.Brand} - {rent.Vehicle.VehicleModel.Model} - {rent.Vehicle.Kilometers} \t Start date: {rent.StartOfRent} \t End date: {rent.EndOfRent}");
+            Console.WriteLine($"Id: {rent.Id} \t Vehicle: {rent.Vehicle.VehicleModel.Brand.Name} - {rent.Vehicle.VehicleModel.Name} - {rent.Vehicle.Kilometers} \t Start date: {rent.StartOfRent} \t End date: {rent.EndOfRent}");
         }
 
         public static void PrintRents(ICollection<Rent> rents)

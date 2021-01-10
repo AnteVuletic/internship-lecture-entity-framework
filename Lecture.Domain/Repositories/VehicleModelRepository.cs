@@ -35,7 +35,7 @@ namespace Lecture.Domain.Repositories
             var vehicleModel = new VehicleModel
             {
                 Brand = vehicleBrand,
-                Model = model,
+                Name = model,
                 VehicleType = vehicleType
             };
 
@@ -76,7 +76,7 @@ namespace Lecture.Domain.Repositories
                             averageMilliseconds)
                 .ToList();
                 
-            return aboveAverageRentVehicles.GroupBy(v => new { v.VehicleModelId, v.VehicleModel.Model, v.VehicleModel.Brand.Brand})
+            return aboveAverageRentVehicles.GroupBy(v => new { v.VehicleModelId, Model = v.VehicleModel.Name, Brand = v.VehicleModel.Brand.Name})
                 .Select(g => new RentDurationByModel
                 {
                     VehicleModel = $"{g.Key.Brand} - {g.Key.Model}",
@@ -89,7 +89,7 @@ namespace Lecture.Domain.Repositories
         {
             var doesVehicleModelAlreadyExist = DbContext.VehicleModels.Any(vm =>
                 vm.BrandId == vehicleBrandId && vm.VehicleType == vehicleType &&
-                vm.Model == model);
+                vm.Name == model);
 
             return doesVehicleModelAlreadyExist;
         }

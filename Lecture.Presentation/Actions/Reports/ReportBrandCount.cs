@@ -20,7 +20,7 @@ namespace Lecture.Presentation.Actions.Reports
             var brandCounts = _vehicleRepository.GetCountByBrands();
             foreach (var countByBrand in brandCounts)
             {
-                Console.WriteLine($"Brand: {countByBrand.Brand} Count: {countByBrand.Count}");
+                Console.WriteLine($"Name: {countByBrand.Brand} Count: {countByBrand.Count}");
             }
 
             Console.ReadLine();

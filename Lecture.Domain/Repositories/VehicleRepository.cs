@@ -108,7 +108,7 @@ namespace Lecture.Domain.Repositories
         public ICollection<CountByBrand> GetCountByBrands()
         {
             return DbContext.Vehicles
-                .GroupBy(v => new { v.VehicleModel.Brand.Id, v.VehicleModel.Brand.Brand })
+                .GroupBy(v => new { v.VehicleModel.Brand.Id, Brand = v.VehicleModel.Brand.Name })
                 .Select(g => new CountByBrand
                 {
                     Brand = g.Key.Brand,

@@ -15,7 +15,7 @@ namespace Lecture.Domain.Repositories
 
         public ResponseResultType Add(string brand)
         {
-            var isBrandAlreadyAdded = DbContext.VehicleBrands.Any(vb => vb.Brand.Contains(brand));
+            var isBrandAlreadyAdded = DbContext.VehicleBrands.Any(vb => vb.Name.Contains(brand));
             if (isBrandAlreadyAdded)
             {
                 return ResponseResultType.AlreadyExists;
@@ -23,7 +23,7 @@ namespace Lecture.Domain.Repositories
 
             var vehicleBrand = new VehicleBrand
             {
-                Brand = brand
+                Name = brand
             };
 
             DbContext.VehicleBrands.Add(vehicleBrand);

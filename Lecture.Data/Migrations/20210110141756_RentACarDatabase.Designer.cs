@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Lecture.Data.Migrations
 {
     [DbContext(typeof(RentACarDbContext))]
-    [Migration("20210110125925_DatabaseSeed")]
-    partial class DatabaseSeed
+    [Migration("20210110141756_RentACarDatabase")]
+    partial class RentACarDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -459,14 +459,14 @@ namespace Lecture.Data.Migrations
                         {
                             Id = 1,
                             Cost = 200m,
-                            CreatedAt = new DateTime(2021, 1, 10, 13, 59, 24, 703, DateTimeKind.Local).AddTicks(9858),
+                            CreatedAt = new DateTime(2021, 1, 10, 15, 17, 56, 387, DateTimeKind.Local).AddTicks(224),
                             RentRateType = 1
                         },
                         new
                         {
                             Id = 2,
                             Cost = 300m,
-                            CreatedAt = new DateTime(2021, 1, 10, 13, 59, 24, 712, DateTimeKind.Local).AddTicks(5045),
+                            CreatedAt = new DateTime(2021, 1, 10, 15, 17, 56, 389, DateTimeKind.Local).AddTicks(1261),
                             RentRateType = 0
                         });
                 });
@@ -548,7 +548,7 @@ namespace Lecture.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("Brand")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -559,22 +559,22 @@ namespace Lecture.Data.Migrations
                         new
                         {
                             Id = 1,
-                            Brand = "Volkswagen"
+                            Name = "Volkswagen"
                         },
                         new
                         {
                             Id = 2,
-                            Brand = "Porsche"
+                            Name = "Porsche"
                         },
                         new
                         {
                             Id = 3,
-                            Brand = "Yamaha"
+                            Name = "Yamaha"
                         },
                         new
                         {
                             Id = 4,
-                            Brand = "Citroen"
+                            Name = "Citroen"
                         });
                 });
 
@@ -588,7 +588,7 @@ namespace Lecture.Data.Migrations
                     b.Property<int>("BrandId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Model")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("VehicleType")
@@ -605,35 +605,35 @@ namespace Lecture.Data.Migrations
                         {
                             Id = 1,
                             BrandId = 1,
-                            Model = "Up",
+                            Name = "Up",
                             VehicleType = 0
                         },
                         new
                         {
                             Id = 2,
                             BrandId = 1,
-                            Model = "Golf",
+                            Name = "Golf",
                             VehicleType = 0
                         },
                         new
                         {
                             Id = 3,
                             BrandId = 2,
-                            Model = "Cayenne",
+                            Name = "Cayenne",
                             VehicleType = 0
                         },
                         new
                         {
                             Id = 4,
                             BrandId = 3,
-                            Model = "T-Max",
+                            Name = "T-Max",
                             VehicleType = 1
                         },
                         new
                         {
                             Id = 5,
                             BrandId = 4,
-                            Model = "Berlingo",
+                            Name = "Berlingo",
                             VehicleType = 2
                         });
                 });
